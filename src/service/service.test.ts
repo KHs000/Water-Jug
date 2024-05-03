@@ -1,4 +1,4 @@
-import { describe, it } from "node:test";
+import { describe } from "node:test";
 import { Service } from "./service";
 import { DieHardSolution, PossiblyVeryLongSolution } from "./service.models";
 
