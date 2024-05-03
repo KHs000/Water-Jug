@@ -1,9 +1,4 @@
-type BucketStep = {
-    step: number,
-    bucketX: number,
-    bucketY: number,
-    action: string
-}
+import { BucketStep } from "../domain/domain";
 
 export class Service {
     private x_capacity: number;
@@ -48,8 +43,8 @@ export class Service {
         !!path.find(p => p.bucketX === pair.bucketX && p.bucketY === pair.bucketY)
 
     SolveRiddle(target: number): BucketStep[] | null {
-        const path: BucketStep[] = [];
-        const queue: BucketStep[][] = [];
+        const path: Array<BucketStep> = [];
+        const queue: Array<Array<BucketStep>> = [];
 
         path.push(this.state);
         queue.push(path);
