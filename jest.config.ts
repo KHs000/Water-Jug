@@ -3,4 +3,5 @@ export default {
     silent: true,
     collectCoverage: true,
     collectCoverageFrom: ["src/**/*.ts"],
+    modulePathIgnorePatterns: ["src/server.ts"],
 }
