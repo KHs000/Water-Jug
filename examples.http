@@ -1,0 +1,60 @@
+GET http://localhost:8080/ping HTTP/1.1
+
+--- Response
+{
+    "response": "OK"
+}
+
+###
+
+POST http://localhost:8080/solve HTTP/1.1
+Content-Type: application/json
+
+--- Body
+{
+    "x_capacity": 5,
+    "y_capacity": 3,
+    "z_amount_wanted": 4
+}
+
+--- Response
+{
+    "solution": [
+        {
+            "step": 1,
+            "bucketX": 5,
+            "bucketY": 0,
+            "action": "Fill bucket X"
+        },
+        {
+            "step": 2,
+            "bucketX": 2,
+            "bucketY": 3,
+            "action": "Transfer from bucket X to bucket Y"
+        },
+        {
+            "step": 3,
+            "bucketX": 2,
+            "bucketY": 0,
+            "action": "Empty bucket Y"
+        },
+        {
+            "step": 4,
+            "bucketX": 0,
+            "bucketY": 2,
+            "action": "Transfer from bucket X to bucket Y"
+        },
+        {
+            "step": 5,
+            "bucketX": 5,
+            "bucketY": 2,
+            "action": "Fill bucket X"
+        },
+        {
+            "step": 6,
+            "bucketX": 4,
+            "bucketY": 3,
+            "action": "Transfer from bucket X to bucket Y SOLVED"
+        }
+    ]
+}
