@@ -13,7 +13,7 @@ In this exercise, backend candidates will design a solution for the classic Wate
 
 ## Design
 For this project, the Express library was used to work as a server to receive the requests. The functionality was divided into routes, controller and service. The routes only define which endpoints are available and point them to methods on controller. The controller is only responsible for an initial validation on the required parameters and its types and calls 
-the service. The service contain all business logic needed to process the request. Also a domain driven design (DDD) approach was used to group the files from the same domain. Even though the only domain present right now would be the buckets involved in the riddle, there is a possibility to expand this project and continue using this design.
+the service. The service contain all business logic needed to process the request. Also a domain driven design (DDD) approach was used to group the files from the same domain. Even though the only domain present right now would be the buckets involved in the riddle, there is a possibility to expand this project and continue using this design. Routes examples can be found in the `examples.http` file.
 
 The solution for the riddle used here was an application of the Breadth-first search (BFS) algorithm, since it's a commonly used approach to search for the "shortest path". In the context of this assessement, the shortest path would be the solution to the riddle for its given inputs with the least possible amount of steps. The algorithm begins with the initial state of both buckets being empty (0, 0) as the root node, and from there all possible changes of the current state are applied in it:
   - Fill X
